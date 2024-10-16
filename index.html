@@ -1,11 +1,9 @@
-<h1> Hello World <h1>
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的簡單網頁</title>
+    <title>我的簡單網頁 - Flex 佈局</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,11 +27,18 @@
             background-color: #f8f9fa;
             border: 1px solid #ddd;
         }
-        img {
-            display: block;
-            width: 100%;
+        .image-gallery {
+            display: flex;
+            justify-content: space-between; /* 圖片之間分散排列 */
+            align-items: center;
+            gap: 20px; /* 圖片之間的間距 */
+            margin-top: 20px;
+        }
+        .image-gallery img {
+            width: 30%; /* 每張圖片佔容器的30%寬度 */
             height: auto;
-            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -57,8 +62,14 @@
         <!-- 圖片區塊 -->
         <div class="content-block">
             <h2>美麗的風景</h2>
-            <p>這是我最喜歡的一張風景照片：</p>
-            <img src="https://i.imgur.com/KoixE8m.jpeg" alt="美麗的風景">
+            <p>這是三張我最喜歡的風景照片：</p>
+            
+            <!-- 圖片使用 Flexbox 佈局 -->
+            <div class="image-gallery">
+                <img src="https://i.imgur.com/uLqDmwY.jpeg" alt="Picture 1">
+                <img src="https://i.imgur.com/DTXo83L.jpeg" alt="Picture 2">
+                <img src="https://i.imgur.com/YGQHHXS.jpeg" alt="Picture 3">
+            </div>
         </div>
     </div>
 
